@@ -18,7 +18,7 @@ const NavBar = () => {
                         <li><a href='./#contact' >Contact</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl" href='./'>LOGO</a>
+                <a className="btn btn-ghost normal-case text-xl" href='./'>NF</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
