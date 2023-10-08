@@ -10,8 +10,8 @@ const About = () => {
                 <figure className='pb-10 md:p-0 md:px-0 px-28'><Image src={headshot} alt="Album" priority={true}></Image></figure>
             </div>
             <div>
-                <h2 className="card-title text-accent">Basic Info + Skills</h2>
-                <p className='text-secondary'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent metus lorem, fermentum eget viverra id, facilisis sed nulla. Donec nulla mi, faucibus sed nunc nec, feugiat ornare velit. Quisque id tortor pretium, consectetur orci quis, blandit tellus. Aliquam fermentum eleifend porta. Suspendisse nisl tortor, suscipit non nisi eget, accumsan sodales mi. Aliquam et volutpat justo. Duis feugiat nisl sed tempor mattis.</p>
+                <h2 className="card-title text-accent">About</h2>
+                <p className='text-secondary'>I am dedicated to optimizing business processes and enhancing efficiency within the ServiceNow platform. I specialize in creating workflow automation, IT service management, and service catalog applications to streamline and improve business processes. My work is dedicated to enhancing organizational efficiency and delivering seamless service experiences to end-users.</p>
             </div>
         </div>
 
