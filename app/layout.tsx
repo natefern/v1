@@ -1,8 +1,8 @@
 import './globals.css'
 import { Rubik } from 'next/font/google'
 import type { Metadata } from 'next'
-import NavBar from './components/navbar/NavBar'
 const rubik = Rubik({ subsets: ['latin'] })
+import BottomBar from './components/BottomBar'
 
 export const metadata: Metadata = {
   title: 'Nathan Fernandez'
@@ -18,8 +18,8 @@ export default function RootLayout({
 
       <body className={rubik.className}>
         {/* Insert Navbar Here */}
-        <NavBar />
         {children}
+        <BottomBar></BottomBar>
       </body>
     </html>
   )

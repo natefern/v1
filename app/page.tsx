@@ -2,6 +2,7 @@ import About from './components/home/About'
 import SkillSet from './components/home/SkillSet/Skills'
 import Certs from './components/home/SkillSet/Certs'
 import Contact from './components/home/Contact/Contact'
+import NavBar from './components/navbar/NavBar'
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
   var whatIm = "I'm a ServiceNow Developer"
   return (
     <main>
+      <NavBar />
       <div className="px-10 hero min-h-screen">
         <div className="bg-transparent hero-content flex-col lg:flex-row-reverse">
           <div>

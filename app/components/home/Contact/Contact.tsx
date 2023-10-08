@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <>
             {/* Container for demo purpose */}
-            <div id="contact" className="container my-0 mx-auto md:px-6">
+            <div id="contact" className="container my-0 mx-auto md:px-6 pb-10">
                 {/* Section: Design Block */}
                 <section>
                     <div className="container px-10 md:0">
