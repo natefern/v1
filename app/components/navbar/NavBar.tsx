@@ -27,7 +27,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a href='#snblog' className="btn btn-outline btn-accent m-3">SN Blog</a>
+                <a href='./sn-blog' className="btn btn-outline btn-accent m-3">SN Blog</a>
                 <a href='#myblog' className="btn btn-outline btn-accent m-3">My Blog</a>
             </div>
         </div>
