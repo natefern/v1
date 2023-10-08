@@ -17,18 +17,18 @@ const NavBar = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">LOGO</a>
+                <a className="btn btn-ghost normal-case text-xl" href='./'>LOGO</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a href='#about'><span className='text-accent'>1.</span>About</a></li>
-                    <li><a href='#skillset'><span className='text-accent'>2.</span>Skill Sets</a></li>
-                    <li><a href='#contact'><span className='text-accent'>3.</span>Contact</a></li>
+                    <li><a href='./#about'><span className='text-accent'>1.</span>About</a></li>
+                    <li><a href='./#skillset'><span className='text-accent'>2.</span>Skill Sets</a></li>
+                    <li><a href='./#contact'><span className='text-accent'>3.</span>Contact</a></li>
                 </ul>
             </div>
             <div className="navbar-end">
                 <a href='./sn-blog' className="btn btn-outline btn-accent m-3">SN Blog</a>
-                <a href='#myblog' className="btn btn-outline btn-accent m-3">My Blog</a>
+                <a href='./my-blog' className="btn btn-outline btn-accent m-3">My Blog</a>
             </div>
         </div>
 
