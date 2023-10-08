@@ -1,5 +1,6 @@
 import { truncate } from 'fs'
 import React from 'react'
+import Link from 'next/link'
 // Initialization for ES Users
 
 
@@ -13,7 +14,7 @@ const NavBar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {/* Dropdown Menu Items */}
-                        <li><a href='#about'>About</a></li>
+                        <li><a href='./#about'>About</a></li>
                         <li><a href='./#contact' >Contact</a></li>
                     </ul>
                 </div>
@@ -29,8 +30,8 @@ const NavBar = () => {
             </div>
             <div className="navbar-end">
                 {/* End Navbar Items */}
-                <a href='./sn-blog' className="btn btn-outline btn-accent m-3">SN Blog</a>
-                <a href='./my-blog' className="btn btn-outline btn-accent m-3">My Blog</a>
+                <a href='./blog' className="btn btn-outline btn-accent m-3">Blog</a>
+                <Link href='/resume.pdf' download="nathanFernandez" className="btn btn-outline btn-accent m-3">Resume</Link>
             </div>
         </div>
 

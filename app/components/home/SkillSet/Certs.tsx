@@ -3,7 +3,7 @@ import React from 'react'
 const Certs = () => {
     return (
         <>
-            <div className="container md:my-24 mx-auto md:px-6">
+            <div id="skillset" className="container md:my-24 mx-auto md:px-6">
                 <section className="text-center pb-36 px-10">
                     <h2 className="mb-10 text-3xl text-base-100 font-bold">Certifications</h2>
 
