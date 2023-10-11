@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import LinkedIn from './../../public/linkedin.png'
-import ServiceNow from './../../public/servicenow.png'
-import Github from './../../public/github.png'
+import LinkedIn from '/public/linkedin.png'
+import ServiceNow from '/public/servicenow.png'
+import Github from '/public/github.png'
+import Youtube from '/public/youtube.png'
 
 const BottomBar = () => {
     return (
@@ -13,6 +14,9 @@ const BottomBar = () => {
                 </a>
                 <a className="btn btn-ghost normal-case text-xl" href='https://nowlearning.servicenow.com/lxp?id=nl_public&user=Natefernan415608'>
                     <Image src={ServiceNow} alt='' width={40} height={40}></Image>
+                </a>
+                <a className="btn btn-ghost normal-case text-xl" href='https://www.youtube.com/@nferna'>
+                    <Image src={Youtube} alt='' width={40} height={40}></Image>
                 </a>
                 <a className="btn btn-ghost normal-case text-xl" href='https://github.com/natefern'>
                     <Image src={Github} alt='' width={40} height={40}></Image>

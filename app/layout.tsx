@@ -1,12 +1,14 @@
 import './globals.css'
-import { Rubik } from 'next/font/google'
-import type { Metadata } from 'next'
-const rubik = Rubik({ subsets: ['latin'] })
+import { Metadata } from 'next';
+import Head from 'next/head';
 import BottomBar from './components/BottomBar'
 
+import { Rubik } from 'next/font/google'
+const rubik = Rubik({ subsets: ['latin'] })
+
 export const metadata: Metadata = {
-  title: 'Nathan Fernandez'
-}
+  title: 'Nathan Fernandez',
+};
 
 export default function RootLayout({
   children,
@@ -15,10 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme='mytheme' className="scroll-smooth">
-
+      <Head>
+        <link rel="icon" href="/public/favicon.ico" sizes="any" />
+        {/* Add other meta tags.... */}
+      </Head>
       <body className={rubik.className}>
-        {/* Insert Navbar Here */}
+        {/* Implement navbar here later*/}
         {children}
+
         <BottomBar></BottomBar>
       </body>
     </html>

@@ -1,17 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
-import JS from "../../../../public/javascript.png"
-import PY from "../../../../public/python.png"
-import SQL from "../../../../public/mysql.png"
-import Java from "../../../../public/java.png"
-import Swift from "../../../../public/swift.png"
-import Bash from "../../../../public/bash.png"
-import Next from "../../../../public/nextjs.png"
-import Express from "../../../../public/express.png"
-import Node from "../../../../public/nodejs.png"
-import Angular from "../../../../public/angularjs.png"
-import Jquery from "../../../../public/jquery.png"
-import Bootstrap from "../../../../public/bootstrap.png"
+import JS from "/public/javascript.png"
+import PY from "/public/python.png"
+import SQL from "/public/mysql.png"
+import Java from "/public/java.png"
+import Swift from "/public/swift.png"
+import Bash from "/public/bash.png"
+import Next from "/public/nextjs.png"
+import Express from "/public/express.png"
+import Node from "/public/nodejs.png"
+import Angular from "/public/angularjs.png"
+import Jquery from "/public/jquery.png"
+import Bootstrap from "/public/bootstrap.png"
 
 const SkillSet = () => {
     return (

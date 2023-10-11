@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import Portrait from './../../../public/portrait.jpg'
 import ContactClient from './ContactClient.js'
 
 const Contact = () => {

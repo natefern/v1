@@ -8,11 +8,12 @@ export default function Contact() {
         name: '',
         email: '',
         message: '',
-        access_key: 'cf3e4082-630c-4852-b1c2-092f12c61ac8', // Replace with your actual access key
+        access_key: 'cf3e4082-630c-4852-b1c2-092f12c61ac8', // Private
     });
 
     const [recaptchaValue, setRecaptchaValue] = useState(null);
     const [submitStatus, setSubmitStatus] = useState(null); // useState to conditionally display form submission status
+    const [submitting, setSubmitting] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,44 +32,48 @@ export default function Contact() {
         }
 
         try {
+            setSubmitting(true);
+            // API call to submit form
             const response = await axios.post('https://api.web3forms.com/submit', formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
 
+            // Clear form fields righy after gettting a response
+            setFormData({
+                name: '',
+                email: '',
+                message: '',
+            });
+
             const result = response.data;
             if (result.success) {
-                console.log(result);
-                setSubmitStatus('success');
-                // Clear form fields and reset submission status after 3 seconds
+                //console.log(result);
+                setSubmitStatus('success'); // Gives user success confirmation for 3 seconds
                 setTimeout(() => {
-                    setFormData({
-                        name: '',
-                        email: '',
-                        message: '',
-                    });
                     setSubmitStatus(null);
                 }, 3000);
+                setSubmitting(false);
             } else {
-                console.error(result);
+                //console.error(result);
                 setSubmitStatus('error');
                 // Handle form submission errors.
-                // Clear form fields and reset submission status after 3 seconds
                 setTimeout(() => {
-                    setFormData({
-                        name: '',
-                        email: '',
-                        message: '',
-                    });
-                    setSubmitStatus(null);
+                    setSubmitStatus(null);  // Gives user error message for 3 seconds
                 }, 3000);
-
+                setSubmitting(false);
             }
         } catch (error) {
             console.error('Error submitting form:', error);
             // Add code here to handle network errors.
             setSubmitStatus('error');
+            setSubmitting(false);
+            setFormData({
+                name: '',
+                email: '',
+                message: '',
+            });
         }
     };
 
@@ -83,7 +88,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Name"
-                        required
+                        required={true}
                     />
                     <input
                         className='block h-8 rounded-xl'
@@ -92,7 +97,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Email"
-                        required
+                        required={true}
                     />
                     <textarea
                         className='block h-28 rounded-xl'
@@ -100,14 +105,17 @@ export default function Contact() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Message"
-                        required
+                        required={true}
+
                     ></textarea>
                 </div>
 
                 <div className='flex flex-col gap-5 md:gap10 md:flex-row place-content-evenly'>
                     {/* GOOGLE reCAPTCHA */}
                     <ReCAPTCHA sitekey='6LfhPnIoAAAAAKg9bLqfDj1i_VpLM3XrOU7QKrRX' onChange={handleRecaptchaChange} />
-                    <button className='btn btn-outline btn-primary' type="submit" onClick={() => console.log('Click')}>Submit Form</button>
+                    <button disabled={submitting} className='btn btn-outline btn-primary' type="submit" onClick={console.log('click')}>
+                        {submitting === true ? "Submitting..." : "Submit Form" /* Let user know form is being submitted */}
+                    </button>
                 </div>
 
                 {/* Conditional success or error message */}
@@ -129,6 +137,7 @@ export default function Contact() {
                         <span>Your form has been submitted successfully!</span>
                     </div>
                 )}
+
                 {submitStatus === 'error' && (
                     <div className="alert alert-danger">
                         <svg
