@@ -1,5 +1,7 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
+import Nferna from '/public/nferna.png'
 
 const LinkSvg = () => {
     return (
@@ -57,7 +59,14 @@ const NavBar = () => {
                         <li className='border-t-4'><Link href='/resume.pdf' className='text-primary text-lg' download="nathanFernandez"><div><DownloadSvg /></div>Resume</Link></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-3xl" href='./'>NF</a>
+                <a href='./' className='hidden lg:flex lg:pl-12'>
+                    <Image src={Nferna} alt='' width={70} height={70}></Image>
+                </a>
+            </div>
+            <div className="navbar-center lg:hidden">
+                <a href='./' className='-ml-9'>
+                    <Image src={Nferna} alt='' width={70} height={70}></Image>
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -73,7 +82,7 @@ const NavBar = () => {
 
             <div className="navbar-end hidden lg:flex">
                 {/* End Navbar Items */}
-                <a href='./blog' className="btn btn-outline btn-accent lg:m-3">Projects</a>
+                <a href='./projects' className="btn btn-outline btn-accent lg:m-3">Projects</a>
                 <a href='./blog' className="btn btn-outline btn-accent lg:m-3">Blog</a>
                 <Link href='/resume.pdf' download="nathanFernandez" className="btn btn-outline btn-accent md:m-4">Resume</Link>
             </div>
