@@ -11,7 +11,7 @@ const Certs = () => {
                         {/* APP DEV */}
                         <div className="lg:mb-0">
                             <div
-                                className="block h-full rounded-lg bg-white shadow-[0_px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                                className="py-4 block h-full rounded-lg bg-white shadow-[0_px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
                                 <div className="flex justify-center">
                                     <div className="-mt-6 inline-block rounded-full bg-white p-2 text-accent shadow-md">
                                         <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-10 md:w-10">
@@ -32,7 +32,7 @@ const Certs = () => {
                         {/* SYS ADMIN */}
                         <div className="lg:mb-0">
                             <div
-                                className="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                                className="py-4 block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
                                 <div className="flex justify-center">
                                     <div className="-mt-6 inline-block rounded-full bg-white p-2 text-accent shadow-md">
                                         <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-10 md:w-10">
@@ -53,7 +53,7 @@ const Certs = () => {
                         {/* ITSM SPECIALIST */}
                         <div className="lg:mb-0">
                             <div
-                                className="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                                className="py-4 block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
                                 <div className="flex justify-center">
                                     <div className="-mt-6 inline-block rounded-full bg-white p-2 text-accent shadow-md">
                                         <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-10 md:w-10">
