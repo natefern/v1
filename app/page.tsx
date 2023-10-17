@@ -7,6 +7,7 @@ export default function Home() {
 
   var aboutMsg = "My commitment to staying at the forefront of ServiceNow's evolving technology allows me to drive efficiency, enhance user experiences, and deliver tangible results. Whether it's designing complex business rules, developing Service Portal widgets, or integrating ServiceNow with external systems, I thrive on helping businesses achieve their implementation goals."
   var whatIm = "I'm a ServiceNow Developer"
+
   return (
     <main>
       <div className="px-10 hero min-h-screen">

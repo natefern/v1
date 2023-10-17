@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Learning Module
+model Module {
+  id       Int      @id @default(autoincrement())
+  title    String
+  topics   Topic[]
+  createdAt DateTime @default(now())
+}
+
+model Topic {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  moduleId  Int
+  module    Module   @relation(fields: [moduleId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+// Blog posts
+model BlogPost {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  comments  Comment[]
+  createdAt DateTime @default(now())
+}
+
+model Comment {
+  id       Int      @id @default(autoincrement())
+  name     String?  // Name of the commenter, can be nullable if you want
+  content  String
+  postId   Int
+  post     BlogPost @relation(fields: [postId], references: [id])
+  postedAt DateTime @default(now())
+}

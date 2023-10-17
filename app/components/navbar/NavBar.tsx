@@ -42,54 +42,57 @@ const DownloadSvg = () => {
 
 const NavBar = () => {
     return (
-        <div className="navbar bg-base-100">
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        {/* Dropdown Anchor Links */}
-                        <li><a href='./#about' className='text-primary text-lg'><span className='text-accent text-2xl'>#</span>About</a></li>
-                        <li><a href='./#contact' className='text-primary text-lg'><span className='text-accent text-2xl'>#</span>Contact</a></li>
-                        {/* Dropdown Hyperlinks */}
-                        <li className='border-t-4'><a href='./projects' className='text-primary text-lg'><div><LinkSvg /></div>Projects</a></li>
-                        <li><a href='./blog' className='text-primary text-lg'><div><LinkSvg /></div>Blog</a></li>
-                        {/* Dropdown Downloads */}
-                        <li className='border-t-4'><Link href='/resume.pdf' className='text-primary text-lg' download="nathanFernandez"><div><DownloadSvg /></div>Resume</Link></li>
+        <div>
+
+            <div className="navbar bg-base-100">
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </label>
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            {/* Dropdown Anchor Links */}
+                            <li><a href='./#about' className='text-primary text-lg'><span className='text-accent text-2xl'>#</span>About</a></li>
+                            <li><a href='./#contact' className='text-primary text-lg'><span className='text-accent text-2xl'>#</span>Contact</a></li>
+                            {/* Dropdown Hyperlinks */}
+                            <li className='border-t-4'><a href='./projects' className='text-primary text-lg'><div><LinkSvg /></div>Projects</a></li>
+                            <li><a href='./blog' className='text-primary text-lg'><div><LinkSvg /></div>Blog</a></li>
+                            {/* Dropdown Downloads */}
+                            <li className='border-t-4'><Link href='/resume.pdf' className='text-primary text-lg' download="nathanFernandez"><div><DownloadSvg /></div>Resume</Link></li>
+                        </ul>
+                    </div>
+                    <a href='./' className='hidden lg:flex lg:pl-12'>
+                        <Image src={Nferna} alt='' width={70} height={70}></Image>
+                    </a>
+                </div>
+                <div className="navbar-center lg:hidden">
+                    <a href='./' className='-ml-9'>
+                        <Image src={Nferna} alt='' width={70} height={70}></Image>
+                    </a>
+                </div>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        {/* Center Navbar List Items */}
+                        <li>
+                            <a href='./#about' className='text-primary lg:text-xl'><span className='text-accent lg:text-xl'>#</span>About</a>
+                        </li>
+                        <li>
+                            <a href='./#contact' className='text-primary lg:text-xl'><span className='text-accent lg:text-xl'>#</span>Contact</a>
+                        </li>
                     </ul>
                 </div>
-                <a href='./' className='hidden lg:flex lg:pl-12'>
-                    <Image src={Nferna} alt='' width={70} height={70}></Image>
-                </a>
-            </div>
-            <div className="navbar-center lg:hidden">
-                <a href='./' className='-ml-9'>
-                    <Image src={Nferna} alt='' width={70} height={70}></Image>
-                </a>
-            </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    {/* Center Navbar List Items */}
-                    <li>
-                        <a href='./#about' className='text-primary lg:text-xl'><span className='text-accent lg:text-xl'>#</span>About</a>
-                    </li>
-                    <li>
-                        <a href='./#contact' className='text-primary lg:text-xl'><span className='text-accent lg:text-xl'>#</span>Contact</a>
-                    </li>
-                </ul>
+
+                <div className="navbar-end hidden lg:flex">
+                    {/* End Navbar Items */}
+                    <a href='./projects' className="btn btn-outline btn-accent lg:m-3">Projects</a>
+                    <a href='./blog' className="btn btn-outline btn-accent lg:m-3">Blog</a>
+                    <Link href='/resume.pdf' download="nathanFernandez" className="btn btn-outline btn-accent md:m-4">Resume</Link>
+                </div>
             </div>
 
-            <div className="navbar-end hidden lg:flex">
-                {/* End Navbar Items */}
-                <a href='./projects' className="btn btn-outline btn-accent lg:m-3">Projects</a>
-                <a href='./blog' className="btn btn-outline btn-accent lg:m-3">Blog</a>
-                <Link href='/resume.pdf' download="nathanFernandez" className="btn btn-outline btn-accent md:m-4">Resume</Link>
-            </div>
+
+
         </div>
-
-
-
     )
 }
 
